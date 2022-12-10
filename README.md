@@ -1,3 +1,5 @@
+Send message from java code (in eclipse) to MQ
+
 Prerequisites:
 Download and install Eclipse and MQ explorer.
 
