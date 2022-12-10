@@ -13,7 +13,7 @@ ibm.mq.connName=HOST_IP_ADDRESS(YOUR_PORT_NO)
 ibm.mq.user=YOUR_USER_NAME
 ibm.mq.password=YOUR_USER_NAME_PASSWORD
 
-In the MQFirstAppApplication.java file, for below code lines, give name to your defined queue name.
+In the MQFirstAppApplication.java file, for below code lines, give name to your defined queue name:
  jmsTemplate.convertAndSend("YOUR_QUEUE_NAME", "MQ Client");
  return jmsTemplate.receiveAndConvert("YOUR_QUEUE_NAME").toString();
  
