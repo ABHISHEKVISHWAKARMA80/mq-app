@@ -10,6 +10,7 @@ In the application.properties files, replaced these fields according to your sys
 ibm.mq.queueManager=YOUR_QUEUE_MANAGER_NAME
 ibm.mq.channel=YOUR_SERVER_CONNECTION_CHANNEL_NAME
 ibm.mq.connName=HOST_IP_ADDRESS(YOUR_PORT_NO)
+
 ibm.mq.user=YOUR_USER_NAME
 ibm.mq.password=YOUR_USER_NAME_PASSWORD
 
