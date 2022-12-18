@@ -70,6 +70,6 @@ jmsTemplate.receiveAndConvert("QUEUE.LOCAL").toString(); <br>
 
 Run the java program.
 
-Check the sent message in Linux server using below command:
-cd /opt/mqm/samp/bin 
-./amqsget QUEUE.LOCAL ECLIPSE.TO.LINUX 
+Check the sent message in Linux server using below command: <br>
+cd /opt/mqm/samp/bin <br>
+./amqsget QUEUE.LOCAL ECLIPSE.TO.LINUX
