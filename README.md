@@ -42,12 +42,12 @@ crtmqm ECLIPSE.TO.LINUX
 
 strmqm ECLIPSE.TO.LINUX 
 
-runmqsc ECLIPSE.TO.LINUX 
-define listener(ECLIPSE.TO.LINUX.LISTENER) trptype(tcp) port(1426) control(qmgr) 
-START LISTENER(ECLIPSE.TO.LINUX.LISTENER) 
-define channel(ECLIPSE.TO.LINUX.CHL) chltype(svrconn)  
-define channel(ECLIPSE.TO.LINUX.CHL) chltype(clntconn) conname('9.46.72.151(1426)') qmname(ECLIPSE.TO.LINUX) 
-DEFINE QLOCAL (QUEUE.LOCAL) 
+runmqsc ECLIPSE.TO.LINUX <br>
+define listener(ECLIPSE.TO.LINUX.LISTENER) trptype(tcp) port(1426) control(qmgr) <br>
+START LISTENER(ECLIPSE.TO.LINUX.LISTENER) <br>
+define channel(ECLIPSE.TO.LINUX.CHL) chltype(svrconn)  <br>
+define channel(ECLIPSE.TO.LINUX.CHL) chltype(clntconn) conname('9.46.72.151(1426)') qmname(ECLIPSE.TO.LINUX) <br>
+DEFINE QLOCAL (QUEUE.LOCAL) <br>
 
 sudo usermod -a -G mqm root
 setmqaut -m ECLIPSE.TO.LINUX -t qmgr -p root +all 
