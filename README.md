@@ -49,23 +49,23 @@ define channel(ECLIPSE.TO.LINUX.CHL) chltype(svrconn)  <br>
 define channel(ECLIPSE.TO.LINUX.CHL) chltype(clntconn) conname('9.46.72.151(1426)') qmname(ECLIPSE.TO.LINUX) <br>
 DEFINE QLOCAL (QUEUE.LOCAL) <br>
 
-sudo usermod -a -G mqm root
-setmqaut -m ECLIPSE.TO.LINUX -t qmgr -p root +all 
-setmqaut -m ECLIPSE.TO.LINUX -n QUEUE.LOCAL -t q -p root +all 
+sudo usermod -a -G mqm root <br>
+setmqaut -m ECLIPSE.TO.LINUX -t qmgr -p root +all <br>
+setmqaut -m ECLIPSE.TO.LINUX -n QUEUE.LOCAL -t q -p root +all <br>
 
 
 2) Changes in the windows server (in eclipse):
 
-In application.properties:
-ibm.mq.queueManager=ECLIPSE.TO.LINUX
-ibm.mq.channel=ECLIPSE.TO.LINUX.CHL
-ibm.mq.connName=9.46.72.151(1426)
-ibm.mq.user=root
-ibm.mq.password=your_password
+In application.properties: <br>
+ibm.mq.queueManager=ECLIPSE.TO.LINUX <br>
+ibm.mq.channel=ECLIPSE.TO.LINUX.CHL <br>
+ibm.mq.connName=9.46.72.151(1426) <br>
+ibm.mq.user=root <br>
+ibm.mq.password=your_password <br>
 
-Mention your queue name in "convertAndSend" method in MQFirstAppApplication.java file:
-jmsTemplate.convertAndSend("QUEUE.LOCAL", "abhi");
-jmsTemplate.receiveAndConvert("QUEUE.LOCAL").toString();
+Mention your queue name in "convertAndSend" method in MQFirstAppApplication.java file: <br>
+jmsTemplate.convertAndSend("QUEUE.LOCAL", "abhi"); <br>
+jmsTemplate.receiveAndConvert("QUEUE.LOCAL").toString(); <br>
 
 
 Run the java program.
